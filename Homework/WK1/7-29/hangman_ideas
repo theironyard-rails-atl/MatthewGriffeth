@@ -1,0 +1,8 @@
+HANGMAN REQ.
+
+1 generate phrase
+2 get input
+3 check input
+4 limit attempts
+5 map input
+6 show progress

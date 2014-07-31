@@ -1,0 +1,32 @@
+FOR SYMBOL
+  <=>  []          empty?    intern  pretty_print_cycle  swapcase  upcase
+  ==   capitalize  encoding  length  size                to_proc
+  ===  casecmp     id2name   match   slice               to_s
+  =~   downcase    inspect   next    succ                to_sym
+
+FOR STRING
+     %            chop!           freeze     replace      sub
+  *            chr             getbyte    reverse      sub!
+  +            clear           gsub       reverse!     succ
+  <<           codepoints      gsub!      rindex       succ!
+  <=>          concat          hash       rjust        sum
+  ==           count           hex        rpartition   swapcase
+  ===          crypt           include?   rstrip       swapcase!
+  =~           delete          index      rstrip!      to_c
+  []           delete!         insert     scan         to_f
+  []=          downcase        inspect    scrub        to_i
+  ascii_only?  downcase!       intern     scrub!       to_r
+  b            dump            length     setbyte      to_s
+  bytes        each_byte       lines      shellescape  to_str
+  bytesize     each_char       ljust      shellsplit   to_sym
+  byteslice    each_codepoint  lstrip     size         tr
+  capitalize   each_line       lstrip!    slice        tr!
+  capitalize!  empty?          match      slice!       tr_s
+  casecmp      encode          next       split        tr_s!
+  center       encode!         next!      squeeze      unpack
+  chars        encoding        oct        squeeze!     upcase
+  chomp        end_with?       ord        start_with?  upcase!
+  chomp!       eql?            partition  strip        upto
+
+- Can't use ! on symbols
+- "Strings" can use any method that a :symbol can.
