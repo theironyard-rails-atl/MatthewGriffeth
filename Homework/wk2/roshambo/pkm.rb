@@ -68,18 +68,18 @@ end
 class Geodude < Pokemon
   def initialize(attack, level=1)
     @attack = attack
-    @max_damage = 8
+    @max_damage = (level*8)
     @hit_points_per_level = 15
     super(level)
   end
 
   def rock_slide(other)
-    puts "Ueses #{@attack}"
+    puts "Uses #{@attack}"
     num_attacks = (@level / 3) + 1
     num_attacks.times { self.attack(other) }
     # The other adventurer gets a free swing while your
     #   defenses are down
-    other.attack(self) unless other.dead?
+    other.attack(self) unless other.fainted?
   end
 end
 
