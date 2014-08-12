@@ -1,16 +1,29 @@
 require 'sinatra'
+require 'haml'
+require 'pry'
 
+require './lib/averager.rb'
+
+enable :sessions
 
 get '/' do
-  "Well, hello there."
+  haml :root
 end
 
 get '/later' do
-  "Come back some time."
+  haml :later
 end
 
-get '/elevators'do
-    status = ["NO!","Nope...", "Still no.", "Not yes."]
-   "Are the elevators functional yet?...#{status.sample}"
+
+get '/about' do
+  haml :about
+end
+
+get '/elevators' do
+    status = ["NO!","Nope...", "Still no.", "Not yes."].sample
 haml :elevators
+end
+
+get '/averager' do
+  haml :averager
 end
