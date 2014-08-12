@@ -11,6 +11,6 @@ end
 
 get '/elevators'do
     status = ["NO!","Nope...", "Still no.", "Not yes."]
-    puts "Are the elevators functional yet?"
-    puts "#{status.sample}"
+   "Are the elevators functional yet?...#{status.sample}"
+haml :elevators
 end
