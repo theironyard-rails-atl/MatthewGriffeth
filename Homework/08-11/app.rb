@@ -21,9 +21,14 @@ end
 
 get '/elevators' do
     status = ["NO!","Nope...", "Still no.", "Not yes."].sample
-haml :elevators
+haml :elevators, :locals => { :status => status }
 end
 
 get '/averager' do
   haml :averager
+end
+
+post '/averager' do
+
+
 end
